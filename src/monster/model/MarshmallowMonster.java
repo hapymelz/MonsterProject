@@ -21,8 +21,9 @@ public class MarshmallowMonster
 		this.teeth = true;
 		this.hasNose = true;
 		this.hasTail = true;
+		this.adorableDeathPercent = eyeCount * 25;
 		this.cutenessQuotient = adorableDeathPercent * 5;
-		this.adorableDeathPercent = eyeCount * 4;
+		
 	}
 	
 	public MarshmallowMonster(String name, int eyeCount, int hair, int legCount, boolean teeth, boolean hasNose, boolean hasTail, double cutenessQuotient, double adorableDeathPercent)
