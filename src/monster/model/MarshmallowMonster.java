@@ -37,4 +37,48 @@ public class MarshmallowMonster
 		this.cutenessQuotient = cutenessQuotient;
 		this.adorableDeathPercent = adorableDeathPercent;
 	}
+	public String getName()
+	{
+		return this.name;
+	}
+	
+	public int getEyeCount()
+	{
+		return this.eyeCount;
+	}
+	
+	public int getHair()
+	{
+		return this.hair;
+	}
+
+	public int getLegCount()
+	{
+		return this.legCount;
+	}
+	
+	public boolean getTeeth()
+	{
+		return this.teeth;
+	}
+	
+	public boolean getHasNose()
+	{
+		return this.hasNose;
+	}
+	
+	public boolean getHasTail()
+	{
+		return this.hasTail;
+	}
+	
+	public double getCutenessQuotient()
+	{
+		return this.cutenessQuotient;
+	}
+	
+	public double getAdorableDeathPercent()
+	{
+		return this.adorableDeathPercent;
+	}
 }
