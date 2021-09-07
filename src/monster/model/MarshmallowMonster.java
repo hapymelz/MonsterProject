@@ -20,10 +20,9 @@ public class MarshmallowMonster
 		this.legCount = 4;
 		this.teeth = true;
 		this.hasNose = true;
-		this.hasTail = true;
-		this.adorableDeathPercent = eyeCount * 25;
+		this.hasTail = true;	
 		this.cutenessQuotient = adorableDeathPercent * 5;
-		
+		this.adorableDeathPercent = eyeCount * 20;
 	}
 	
 	public MarshmallowMonster(String name, int eyeCount, int hair, int legCount, boolean teeth, boolean hasNose, boolean hasTail, double cutenessQuotient, double adorableDeathPercent)
@@ -81,5 +80,54 @@ public class MarshmallowMonster
 	public double getAdorableDeathPercent()
 	{
 		return this.adorableDeathPercent;
+	}
+	
+	
+	
+	// Setters
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setEyeCount(int eyeCount)
+	{
+		this.eyeCount = eyeCount;
+	}
+	
+	public void setHair(int hair)
+	{
+		this.hair = hair;
+	}
+	
+	public void setLegCount(int legCount)
+	{
+		this.legCount = legCount;
+	}
+	
+	public void setHasNose(boolean hasNose)
+	{
+		this.hasNose = hasNose;
+	}
+	
+	public void setTeeth(boolean teeth)
+	{
+		this.teeth = teeth;
+	}
+	
+	public void setHasTail(boolean hasTail)
+	{
+		this.hasTail = hasTail;
+	}
+	
+	public void setCutenessQuotient( double cutenessQuotient)
+	{
+		this.cutenessQuotient = cutenessQuotient;
+	}
+	
+	public void setAdorableDeathPercent(double adorableDeathPercent)
+	{
+		this.adorableDeathPercent = adorableDeathPercent;
 	}
 }
