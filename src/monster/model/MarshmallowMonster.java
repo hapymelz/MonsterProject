@@ -21,8 +21,9 @@ public class MarshmallowMonster
 		this.teeth = true;
 		this.hasNose = true;
 		this.hasTail = true;	
-		this.cutenessQuotient = adorableDeathPercent * 5;
 		this.adorableDeathPercent = eyeCount * 20;
+		this.cutenessQuotient = adorableDeathPercent * 5;
+		
 	}
 	
 	public MarshmallowMonster(String name, int eyeCount, int hair, int legCount, boolean teeth, boolean hasNose, boolean hasTail, double cutenessQuotient, double adorableDeathPercent)
@@ -37,6 +38,13 @@ public class MarshmallowMonster
 		this.cutenessQuotient = cutenessQuotient;
 		this.adorableDeathPercent = adorableDeathPercent;
 	}
+	
+	
+	
+	// Getters
+	
+	
+	
 	public String getName()
 	{
 		return this.name;
@@ -86,6 +94,8 @@ public class MarshmallowMonster
 	
 	// Setters
 	
+	
+	
 	public void setName(String name)
 	{
 		this.name = name;
@@ -130,4 +140,20 @@ public class MarshmallowMonster
 	{
 		this.adorableDeathPercent = adorableDeathPercent;
 	}
+	
+	
+	
+	@Override
+	public String toString()
+	{
+		String description = "I am a monster, and my name is " + name;
+		description += ".\n";
+		description += "I have " + eyeCount + " eyes!\n";           
+		description += "I have " + hair + " strands of hair!\n";
+		description += "Most people will rate me " + cutenessQuotient + "/10.0\n";
+		description += "The probability that you would die of adorableness once you gaze upon me is " + adorableDeathPercent + "%/n";		
+		
+		return description;
+	}
+	
 }
