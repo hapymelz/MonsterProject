@@ -4,13 +4,13 @@ import monster.model.MarshmallowMonster;
 import java.util.Scanner;
 
 
-public class MonsterController
+public class Controller
 {
 	private MarshmallowMonster myMonster;
 	private MarshmallowMonster customMonster;
 	private Scanner input;
 	
-	public MonsterController()
+	public Controller()
 	{
 		this.myMonster = new MarshmallowMonster();
 		this.customMonster = new MarshmallowMonster("Jeb_", 2, 26, 7, false, true, false, 0.0, 0.0);
