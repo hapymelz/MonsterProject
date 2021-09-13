@@ -143,6 +143,7 @@ public class MarshmallowMonster
 	
 	
 	
+	
 	@Override
 	public String toString()
 	{
@@ -150,10 +151,36 @@ public class MarshmallowMonster
 		description += ".\n";
 		description += "I have " + eyeCount + " eyes!\n";           
 		description += "I have " + hair + " strands of hair!\n";
+		description += "I have " + legCount + " legs!\n";
+		if (hasNose == true)
+		{
+			description += "I have a nose!\n";
+		}
+		else
+		{
+			description += "I do not have a nose.\n";
+		}
+		if (teeth == true)
+		{
+			description += "I have teeth!\n";
+		}
+		else
+		{
+			description += "I do not have teeth.\n";
+		}
+		if (hasTail == true)
+		{
+			description += "I have a tail!\n";
+		}
+		else
+		{
+			description += "I do not have a tail.\n";
+		}
 		description += "Most people will rate me " + cutenessQuotient + "/10.0\n";
-		description += "The probability that you would die of adorableness once you gaze upon me is " + adorableDeathPercent + "%/n";		
+		description += "The probability that you would die of adorableness once you gaze upon me is " + adorableDeathPercent + "%\n";		
 		
 		return description;
 	}
+	
 	
 }
