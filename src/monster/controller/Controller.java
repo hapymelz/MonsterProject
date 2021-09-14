@@ -2,6 +2,7 @@ package monster.controller;
 
 import monster.model.MarshmallowMonster;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 
 public class Controller
@@ -9,42 +10,25 @@ public class Controller
 	private MarshmallowMonster myMonster;
 	private MarshmallowMonster customMonster;
 	private Scanner input;
+	private ArrayList<MarshmallowMonster> myMonsterList;
 	
 	public Controller()
 	{
 		this.myMonster = new MarshmallowMonster();
 		this.customMonster = new MarshmallowMonster("Jeb_", 2, 26, 7, false, true, false, 0.0, 0.0);
 		this.input = new Scanner(System.in);
+		this.myMonsterList = new ArrayList<MarshmallowMonster>();
 	}
 	
 	public void start()
 	{
+		
+		createAFamily();
+//		monsterLoops();
 //		System.out.println("I made a monster!");
 //		System.out.println(myMonster.getName() + " is its name!");
 //		System.out.println("My custom monster's name is " + customMonster.getName());
-//		System.out.println("My monster has " + myMonster.getEyeCount() + " eyes!");
-//		System.out.println("My monster has " + myMonster.getHair() + " strands of hair!");
-//		System.out.println("My monster has " + myMonster.getLegCount() + " legs!");
 //		
-//		if (myMonster.getTeeth() == true)
-//		{
-//			System.out.println("My monster has teeth!");
-//		}
-//		else
-//		{
-//			System.out.println("My monster does not have teeth!");
-//		}
-//		if (myMonster.getHasTail() == true)
-//		{
-//			System.out.println("My monster has a tail!");
-//		}
-//		else
-//		{
-//			System.out.println("My monster does not have a tail!");
-//		}
-//		System.out.println("Most people will rate my Monster " + myMonster.getCutenessQuotient() + "/10.0");
-//		System.out.println("The probability that you would die of adorableness once you gaze upon my monster is " + myMonster.getAdorableDeathPercent() + "%");
-//	
 //		System.out.println(myMonster);
 //		
 //		System.out.println("What should my monster's new name be?");
@@ -54,10 +38,10 @@ public class Controller
 //		myMonster.setName(response);
 //		System.out.println("My monster is now named " + myMonster.getName());
 //		
-		System.out.println("How many monsters would you like to make?");
-		int monsterNumber = input.nextInt();
-		
-		makingMonsters(monsterNumber);
+//		System.out.println("How many monsters would you like to make?");
+//		int monsterNumber = input.nextInt();
+//		
+//		makingMonsters(monsterNumber);
 	}
 	
 	private void makingMonsters(int times)
@@ -67,7 +51,7 @@ public class Controller
 			MarshmallowMonster custom = new MarshmallowMonster();
 			
 			System.out.println("What is your monsters name?");
-			custom.setName(input.next());
+			custom.setName(input.nextLine());
 			System.out.println("How many eyes does your monster have?");
 			custom.setEyeCount(input.nextInt());
 			System.out.println("How many hair strands does your monster have?");
@@ -84,7 +68,7 @@ public class Controller
 			custom.setAdorableDeathPercent(custom.getEyeCount() * 20);
 			custom.setCutenessQuotient((custom.getAdorableDeathPercent() * 5) / 10);
 			
-			System.out.println("Meet your custom monster! ");
+			System.out.println("\nMeet your custom monster!\n");
 			
 			System.out.println(custom);
 			
@@ -93,6 +77,7 @@ public class Controller
 			times -= 1;
 		}
 	}
+	
 	private void monsterLoops()
 	{
 		for (int index = 0; index < 6; index++)
@@ -101,23 +86,97 @@ public class Controller
 			MarshmallowMonster monster = new MarshmallowMonster();
 			System.out.println("What is your monsters name?");
 			monster.setName(input.next());
-			System.out.println("How many eyes does your monster have?");
-			monster.setEyeCount(input.nextInt());
-			System.out.println("How many hair strands does your monster have?");
-			monster.setHair(input.nextInt());
-			System.out.println("How many legs does your monster have?");
-			monster.setLegCount(input.nextInt());
-			System.out.println("Does your monster have a nose? true/false");
-			monster.setHasNose(input.nextBoolean());
-			System.out.println("Does your monster have teeth? true/false");
-			monster.setTeeth(input.nextBoolean());
-			System.out.println("Does your monster have a tail? true/false");
-			monster.setHasTail(input.nextBoolean());
-			
-			monster.setAdorableDeathPercent(monster.getEyeCount() * 20);
-			monster.setCutenessQuotient((monster.getAdorableDeathPercent() * 5) / 10);
+//			System.out.println("How many eyes does your monster have?");
+//			monster.setEyeCount(input.nextInt());
+//			System.out.println("How many hair strands does your monster have?");
+//			monster.setHair(input.nextInt());
+//			System.out.println("How many legs does your monster have?");
+//			monster.setLegCount(input.nextInt());
+//			System.out.println("Does your monster have a nose? true/false");
+//			monster.setHasNose(input.nextBoolean());
+//			System.out.println("Does your monster have teeth? true/false");
+//			monster.setTeeth(input.nextBoolean());
+//			System.out.println("Does your monster have a tail? true/false");
+//			monster.setHasTail(input.nextBoolean());
+//			
+//			monster.setAdorableDeathPercent(monster.getEyeCount() * 20);
+//			monster.setCutenessQuotient((monster.getAdorableDeathPercent() * 5) / 10);
+//			
+			myMonsterList.add(monster);
 			
 		}
+		System.out.println("\nI made " + myMonsterList.size() + " monsters");
+		
+		for (int index = 0; index < myMonsterList.size(); index++)
+		{
+			System.out.println("The monster at index " + index + " has a name of " + myMonsterList.get(index).getName());
+		}
+		
+		System.out.println(myMonsterList.get(myMonsterList.size() - 1).getName());
+		
+		
+		MarshmallowMonster specialMonster = new MarshmallowMonster();
+		specialMonster.setName("devin");
+		myMonsterList.add(2, specialMonster);
+		
+		MarshmallowMonster removedMonster = myMonsterList.remove(0);
+		System.out.println(removedMonster.getName() + " was removed from the list");
+		
+		MarshmallowMonster alsoRemoved = myMonsterList.set(3, removedMonster);
+		System.out.println("I replaced " + alsoRemoved.getName() + " with " + removedMonster.getName());
+		
+		for (int index = 0; index < myMonsterList.size(); index++)
+		{
+			System.out.println("The monster at index " + index + " has a name of " + myMonsterList.get(index).getName());
+		}
+		
+	}
+	
+	private void createAFamily()
+	{
+		
+	
+		for (int index = 0; index < 6; index++)
+		{
+			MarshmallowMonster monster = new MarshmallowMonster();
+			System.out.println("What is monster " + index + "'s name?");
+			monster.setName(input.nextLine());
+			myMonsterList.add(monster);
+			
+		}
+		
+		for (int index = 0; index < myMonsterList.size(); index++)
+		{
+			System.out.println(myMonsterList.get(index).getName() + " is in the family!");
+		}
+		
+		MarshmallowMonster deadMonster = myMonsterList.remove(5);
+		System.out.println("\n" + deadMonster.getName() + " died. So sad.");
+		
+		
+		System.out.println("\nA new baby monster has joined the family! What do you want to name it?");
+		MarshmallowMonster baby = new MarshmallowMonster();
+		baby.setName(input.nextLine());
+		
+		myMonsterList.add(2, baby);
+		System.out.println(baby.getName() + " is now in the family\n");
+		
+		
+		MarshmallowMonster prodigalSon = myMonsterList.get(3);
+		System.out.println(prodigalSon.getName() + " has a new friend. What is his name?");
+		MarshmallowMonster friend = new MarshmallowMonster();
+		friend.setName(input.nextLine());
+		
+		System.out.println(prodigalSon.getName() + " ran away. " + friend.getName() + " has now joined the family. ");
+		MarshmallowMonster newFamilyMember = myMonsterList.set(3, friend);
+		
+		
+		System.out.println("\nHere is the new family: \n");
+		for (int index = 0; index < myMonsterList.size(); index++)
+		{
+			System.out.println(myMonsterList.get(index).getName() + " is in the family!");
+		}
+		
 	}
 	
 }
