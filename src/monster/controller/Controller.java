@@ -139,7 +139,7 @@ public class Controller
 		for (int index = 0; index < 6; index++)
 		{
 			MarshmallowMonster monster = new MarshmallowMonster();
-			System.out.println("What is monster " + index + "'s name?");
+			System.out.println("What is monster " + (index + 1) + "'s name?");
 			monster.setName(input.nextLine());
 			myMonsterList.add(monster);
 			
@@ -168,7 +168,7 @@ public class Controller
 		friend.setName(input.nextLine());
 		
 		System.out.println(prodigalSon.getName() + " ran away. " + friend.getName() + " has now joined the family. ");
-		MarshmallowMonster newFamilyMember = myMonsterList.set(3, friend);
+		myMonsterList.set(3, friend);
 		
 		
 		System.out.println("\nHere is the new family: \n");
