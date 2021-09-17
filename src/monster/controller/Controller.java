@@ -11,6 +11,7 @@ public class Controller
 	private MarshmallowMonster customMonster;
 	private Scanner input;
 	private ArrayList<MarshmallowMonster> myMonsterList;
+	private ArrayList<MarshmallowMonster> puppyList;
 	
 	public Controller()
 	{
@@ -18,12 +19,18 @@ public class Controller
 		this.customMonster = new MarshmallowMonster("Jeb_", 2, 26, 7, false, true, false, 0.0, 0.0);
 		this.input = new Scanner(System.in);
 		this.myMonsterList = new ArrayList<MarshmallowMonster>();
+		this.puppyList = new ArrayList<MarshmallowMonster>();
 	}
 	
 	public void start()
 	{
-		
-		createAFamily();
+	
+		double x = 4.5;
+		int y = (int) x * 2;
+		System.out.print(y);
+//		LoopPractice(6);
+//		testANewLoop();
+//		createAFamily();
 //		monsterLoops();
 //		System.out.println("I made a monster!");
 //		System.out.println(myMonster.getName() + " is its name!");
@@ -42,6 +49,41 @@ public class Controller
 //		int monsterNumber = input.nextInt();
 //		
 //		makingMonsters(monsterNumber);
+	}
+	
+	private void testANewLoop()
+	{
+		myMonsterList.clear();
+		MarshmallowMonster temp = new MarshmallowMonster();
+		temp.setName("Demo");
+		myMonsterList.add(temp);
+		temp = new MarshmallowMonster();
+		temp.setName("Another monster");
+		myMonsterList.add(temp);
+		temp = new MarshmallowMonster();
+		temp.setName("third monster");
+		myMonsterList.add(temp);
+		
+		// Demo the For Each loop
+		for (MarshmallowMonster currentMonster : myMonsterList)
+		{
+			System.out.println(currentMonster.getName() + " is my name!");
+		}
+		
+		
+		for (MarshmallowMonster current : myMonsterList)
+		{
+			current.setName(current.getName() + " updated");
+		}
+		
+		
+		for (MarshmallowMonster currentMonster : myMonsterList)
+		{
+			System.out.println("The updated name is: " + currentMonster.getName());
+		}
+		
+		
+		
 	}
 	
 	private void makingMonsters(int times)
@@ -178,5 +220,48 @@ public class Controller
 		}
 		
 	}
+	
+	private void LoopPractice(int times)
+	{
+		myMonsterList.clear();
+		for (int index = 0; index < 6; index++)
+		{
+			MarshmallowMonster monster = new MarshmallowMonster();
+			System.out.println("Name a Monster:");
+			monster.setName(input.nextLine());
+			
+			myMonsterList.add(monster);
+		}
+		for (int index = 0; index < myMonsterList.size(); index++)
+		{
+			System.out.println(myMonsterList.get(index).getName() + " is on the list.");
+		}
+		
+		for (MarshmallowMonster monster : myMonsterList)
+		{
+			System.out.println(monster.getName() + " died. So sad.");
+			
+		}
+		
+		myMonsterList.clear();
+		
+		while (times > 0)
+		{
+			System.out.println("You had a funeral for the monster that died.");
+			System.out.println("Then you got a puppy. What was his name?");
+			MarshmallowMonster puppy = new MarshmallowMonster();
+			puppy.setName(input.nextLine());
+			puppyList.add(puppy);	
+			
+			times -= 1;
+		}
+		System.out.println("You got a puppy after all of the monster funerals. Their names are: ");
+		for (int index = 0; index < puppyList.size(); index++)
+		{
+			System.out.println(puppyList.get(index).getName());
+		}
+		
+	}
+	
 	
 }
