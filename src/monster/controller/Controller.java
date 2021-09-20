@@ -25,38 +25,45 @@ public class Controller
 	public void start()
 	{
 	
-//		LoopPractice(6);
-//		testANewLoop();
-//		createAFamily();
-//		monsterLoops();
-//		System.out.println("I made a monster!");
-//		System.out.println(myMonster.getName() + " is its name!");
-//		System.out.println("My custom monster's name is " + customMonster.getName());
-//		
-//		System.out.println(myMonster);
-//		
-//		System.out.println("What should my monster's new name be?");
-//		String response = input.next();
-//		
-//		
-//		myMonster.setName(response);
-//		System.out.println("My monster is now named " + myMonster.getName());
-//		
-//		System.out.println("How many monsters would you like to make?");
-//		int monsterNumber = input.nextInt();
-//		
-//		makingMonsters(monsterNumber);
+		LoopPractice(6);
+		
+		testANewLoop();
+		
+		createAFamily();
+		
+		monsterLoops();
+		
+		System.out.println("I made a monster!");
+		System.out.println(myMonster.getName() + " is its name!");
+		System.out.println("My custom monster's name is " + customMonster.getName());
+		
+		System.out.println(myMonster);
+		
+		System.out.println("What should my monster's new name be?");
+		String response = input.next();
+		
+		
+		myMonster.setName(response);
+		System.out.println("My monster is now named " + myMonster.getName());
+		
+		System.out.println("How many monsters would you like to make?");
+		int monsterNumber = input.nextInt();
+		
+		makingMonsters(monsterNumber);
 	}
 	
 	private void testANewLoop()
 	{
 		myMonsterList.clear();
+		
 		MarshmallowMonster temp = new MarshmallowMonster();
 		temp.setName("Demo");
 		myMonsterList.add(temp);
+		
 		temp = new MarshmallowMonster();
 		temp.setName("Another monster");
 		myMonsterList.add(temp);
+		
 		temp = new MarshmallowMonster();
 		temp.setName("third monster");
 		myMonsterList.add(temp);
@@ -252,7 +259,7 @@ public class Controller
 			
 			times -= 1;
 		}
-		System.out.println("You got a puppy after all of the monster funerals. Their names are: ");
+		System.out.println("You got a puppy after each of the monster funerals. Their names are: ");
 		for (int index = 0; index < puppyList.size(); index++)
 		{
 			System.out.println(puppyList.get(index).getName());
