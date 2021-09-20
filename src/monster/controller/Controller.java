@@ -25,9 +25,6 @@ public class Controller
 	public void start()
 	{
 	
-		double x = 4.5;
-		int y = (int) x * 2;
-		System.out.print(y);
 //		LoopPractice(6);
 //		testANewLoop();
 //		createAFamily();
